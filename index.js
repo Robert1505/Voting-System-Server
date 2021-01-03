@@ -16,7 +16,7 @@ mongoose.connect(
   () => {
     console.log("Connected to the database!");
 
-    app.listen(5000, () => {
+    app.listen(process.env.PORT, () => {
       console.log("Serverul a pornit!");
     });
   }
