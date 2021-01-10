@@ -7,8 +7,7 @@ const Question = require("./Question");
 const cors = require("cors");
 const Answer = require("./Answer");
 
-const URI =
-  "mongodb+srv://user:password12345@cluster0.r69cr.mongodb.net/database?retryWrites=true&w=majority";
+const URI = "mongodb+srv://user:password12345@cluster0.r69cr.mongodb.net/database?retryWrites=true&w=majority";
 
 mongoose.connect(
   URI,
@@ -16,7 +15,7 @@ mongoose.connect(
   () => {
     console.log("Connected to the database!");
 
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT || 5000, () => {
       console.log("Serverul a pornit!");
     });
   }
